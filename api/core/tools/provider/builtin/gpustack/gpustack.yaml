@@ -1,0 +1,40 @@
+indentity:
+  author: gpustack
+  name: gpustack
+  label:
+    en_US: GPUStack
+    zh_Hans: GPUStack
+  description:
+    en_US: GPUStack provides a compatible API for Image Generation.
+    zh_Hans: GPUStack 提供的兼容的图片生成 API。
+  icon: icon.svg
+  tags:
+    - image
+credentials_for_provider:
+  base_url:
+    type: text-input
+    required: true
+    label:
+      en_US: Base URL
+      zh_Hans: GPUStack 服务器的 Base URL
+    placeholder:
+      en_US: Please input GPUStack server's Base URL
+      zh_Hans: 请输入 GPUStack 服务器的 Base URL
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+      zh_Hans: API Key
+    placeholder:
+      en_US: Please input your GPUStack API Key
+      zh_Hans: 请输入你的 GPUStack API Key
+  model:
+    type: text-input
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 模型
+    placeholder:
+      en_US: Please input your GPUStack model
+      zh_Hans: 请输入你的 GPUStack 模型
