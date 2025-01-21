@@ -5,8 +5,8 @@ indentity:
     en_US: GPUStack
     zh_Hans: GPUStack
   description:
-    en_US: GPUStack provides a compatible API for Image Generation.
-    zh_Hans: GPUStack 提供的兼容的图片生成 API。
+    en_US: GPUStack provides APIs for generating images given a prompt and/or an input image when running diffusion models.
+    zh_Hans:
   icon: icon.svg
   tags:
     - image
@@ -15,9 +15,9 @@ credentials_for_provider:
     type: text-input
     required: true
     label:
-      en_US: Base URL
-      zh_Hans: GPUStack 服务器的 Base URL
-    placeholder:
+      en_US: Server URL
+      zh_Hans: 服务器 URL
+    human_description:
       en_US: Please input GPUStack server's Base URL
       zh_Hans: 请输入 GPUStack 服务器的 Base URL
   api_key:
@@ -29,6 +29,9 @@ credentials_for_provider:
     placeholder:
       en_US: Please input your GPUStack API Key
       zh_Hans: 请输入你的 GPUStack API Key
+    url:
+      en_US: https://docs.gpustack.ai/latest/user-guide/api-key-management/
+      zh_Hans: https://docs.gpustack.ai/latest/user-guide/api-key-management/
   model:
     type: text-input
     required: true
