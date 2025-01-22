@@ -1,4 +1,4 @@
-indentity:
+identity:
   author: gpustack
   name: gpustack
   label:
@@ -29,9 +29,7 @@ credentials_for_provider:
     placeholder:
       en_US: Please input your GPUStack API Key
       zh_Hans: 请输入你的 GPUStack API Key
-    url:
-      en_US: https://docs.gpustack.ai/latest/user-guide/api-key-management/
-      zh_Hans: https://docs.gpustack.ai/latest/user-guide/api-key-management/
+    url: https://docs.gpustack.ai/latest/user-guide/api-key-management/
   model:
     type: text-input
     required: true

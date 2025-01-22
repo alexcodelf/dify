@@ -26,10 +26,15 @@ class StableDiffusionTool(BuiltinTool):
             return self.create_text_message(f"Got Error Response:{response.text}")
         res = response.json()
 
-
-        res = response.json()
-
-        # The returned image is base64 and needs to be mark as an image
-        result = [self.create_blob_message(blob=response.content, meta={"mime_type": "image/png"})]
+        result = [self.create_json_message(res)]
+        for image_data in res.get("data", []):
+            if image_data.get("b64_json"):
+                result.append(
+                    self.create_blob_message(
+                        blob=image_data["b64_json"],
+                        meta={"mime_type": "image/png"},
+                        save_as=self.VariableKey.IMAGE.value
+                    )
+                )
 
         return result

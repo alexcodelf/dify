@@ -1,0 +1,83 @@
+identity:
+  name: text2image
+  author: gpustack
+  label:
+    en_US: text2image
+  icon: icon.svg
+description:
+  human:
+    en_US: This tool is used to generate image from prompt via GPUStack's image generation model.
+  llm: This tool is used to generate image from prompt via GPUStack's image generation model.
+parameters:
+  - name: prompt
+    type: string
+    required: true
+    label:
+      en_US: prompt
+      zh_Hans: 提示词
+    human_description:
+      en_US: The text prompt used to generate the image.
+      zh_Hans: 用于生成图片的文字提示词
+    llm_description: this prompt text will be used to generate image.
+    form: llm
+  - name: model
+    type: string
+    required: true
+    label:
+      en_US: model
+    human_description:
+      en_US: image model name that running in GPUStack.
+    form: form
+  - name: cfg_scale
+    type: number
+    required: false
+    default: 4.5
+    label:
+      en_US: CFG Scale
+    human_description:
+      en_US: Classifier Free Guidance Scale - how strongly the image should conform to prompt.
+    form: form
+  - name: n
+    type: number
+    required: false
+    default: 1
+    label:
+      en_US: Number of Images
+    human_description:
+      en_US: Number of images to generate.
+    form: form
+  - name: size
+    type: string
+    required: false
+    default: "512x512"
+    label:
+      en_US: Image Size
+    human_description:
+      en_US: The size of the generated image in format WIDTHxHEIGHT.
+    form: form
+  - name: sample_steps
+    type: number
+    required: false
+    default: 20
+    label:
+      en_US: Sampling Steps
+    human_description:
+      en_US: Number of sampling steps to generate the image.
+    form: form
+  - name: schedule
+    type: string
+    required: false
+    default: "discrete"
+    label:
+      en_US: Schedule
+    human_description:
+      en_US: The noise schedule to use.
+    form: form
+  - name: seed
+    type: number
+    required: false
+    label:
+      en_US: Seed
+    human_description:
+      en_US: Random seed for image generation. Use the same seed to generate similar images.
+    form: form
